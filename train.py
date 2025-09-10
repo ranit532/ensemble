@@ -97,9 +97,10 @@ def evaluate_model(model, X_test, y_test, model_name, run_name):
     plt.savefig(roc_path)
     plt.close()
 
-    # Log plots as artifacts to MLflow
-    mlflow.log_artifact(cm_path, "plots")
-    mlflow.log_artifact(roc_path, "plots")
+    # Plots are saved locally in the 'images' directory.
+    # To log them as MLflow artifacts, a tracking server is required.
+    # mlflow.log_artifact(cm_path, "plots")
+    # mlflow.log_artifact(roc_path, "plots")
     
     return model
 
@@ -199,11 +200,11 @@ if __name__ == "__main__":
         print(f"Stacking model saved to {model_path}")
 
         # Log the model to MLflow
-        mlflow.sklearn.log_model(
-            sk_model=stacking_pipeline,
-            artifact_path="stacking_model",
-            registered_model_name="EnsembleStackingClassifier"
-        )
+        # To log models, a tracking server is required.
+        # mlflow.sklearn.log_model(
+        #     sk_model=stacking_pipeline,
+        #     artifact_path="stacking_model"
+        # )
         
         print("\n--- Training complete! ---")
         print(f"To see the results, run: mlflow ui")

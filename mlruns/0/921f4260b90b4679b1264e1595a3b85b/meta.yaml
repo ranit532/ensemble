@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/921f4260b90b4679b1264e1595a3b85b/artifacts
+end_time: 1757494633818
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 921f4260b90b4679b1264e1595a3b85b
+run_name: ensemble_training_1757494625
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757494628463
+status: 3
+tags: []
+user_id: '2185206'
